@@ -26,6 +26,6 @@ public class Job {
     @ElementCollection
     private List<String> responsibilities = new ArrayList<>();
 
-
+//
 
 }
