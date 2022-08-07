@@ -16,19 +16,19 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class Job {
+public class Education {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private  String company;
-    private  String designation;
+    private  String college;
+    private  String qualification;
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private LocalDate startDate;
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private LocalDate endDate;
-    private boolean isCurrentJob;
-    @ElementCollection //used to map non-entities
-    private List<String> responsibilities = new ArrayList<>();
+    private String summary;
+    @ElementCollection
+    private List<String> educations = new ArrayList<>();
 
     public String getFormattedStartDate() {
         return startDate.format(DateTimeFormatter.ofPattern("MMM yyyy"));
